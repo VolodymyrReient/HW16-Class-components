@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+.main-wrapper {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact-wrapper {
+  margin-bottom: 20px;
+  background-color: grey;
+  height: 100px;
+  width: 200px;
+}
+.name,
+.number {
+  color: aqua;
+  text-align: center;
+}
+.search {
+  margin-bottom: 20px;
+  outline-color: green;
+}

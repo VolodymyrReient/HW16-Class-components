@@ -1,5 +1,7 @@
 import React, {Component} from "react";
-import Contact from "./Contact"
+
+import Contact from "./Contact";
+
 const contacts = [{
     firstName: "Барней",
     lastName: "Стинсовський",
@@ -30,6 +32,7 @@ const contacts = [{
     phone: "+380956319521",
     gender: "male"
 }];
+
 class Contacts extends Component {
 
     state = {
@@ -38,14 +41,15 @@ class Contacts extends Component {
        
     }
     handleSearchChange = (evt) => { 
-        let newArr = [];  
-        let request = (evt.target.value).toLowerCase();
-              contacts.forEach( i=> {
-                let lastName = i.lastName.toLowerCase();
-                let firstName = i.firstName.toLowerCase();
+        const newArr = [];  
+        const request = (evt.target.value).toLowerCase();
+              contacts.map( (i) => {
+                const lastName = i.lastName.toLowerCase();
+                const firstName = i.firstName.toLowerCase();
                 if (lastName.indexOf((request)) !== -1 || firstName.indexOf((request)) !== -1){
                      newArr.push(i);
                 }
+                return newArr;
             })       
             this.setState({
                 contacts: newArr
@@ -68,4 +72,5 @@ class Contacts extends Component {
 
 
 }
+
 export default Contacts;

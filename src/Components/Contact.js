@@ -1,5 +1,4 @@
 import React from "react";
-import Contacts from "./Contacts"
 
 const Contact = (prop) =>  {
     return (
@@ -9,4 +8,5 @@ const Contact = (prop) =>  {
         </div>
     )
 }
+
 export default Contact;
